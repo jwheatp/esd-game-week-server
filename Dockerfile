@@ -1,6 +1,6 @@
 FROM node:18
 
-ENV PORT 8080
+ENV PORT 80
 
 WORKDIR /usr/src/app
 
@@ -13,6 +13,6 @@ RUN npm ci
 
 COPY . .
 
-EXPOSE 8080
+EXPOSE 80
 
 CMD [ "npm", "start" ]
