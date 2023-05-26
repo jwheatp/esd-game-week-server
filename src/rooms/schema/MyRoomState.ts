@@ -1,15 +1,17 @@
 import { MapSchema, Schema, type } from "@colyseus/schema";
 
 export class Player extends Schema {
-    @type("number") x: number;
-    @type("number") y: number;
+  @type("number") x: number;
+  @type("number") y: number;
 
-    trapPositions: { x: number, y: number }[]
-    trapNames: string[]
+  hasFinished: boolean = false;
 
-    @type("string") animation: string;
+  trapPositions: { x: number; y: number }[];
+  trapNames: string[];
 
-    inputQueue: any[] = []
+  @type("string") animation: string;
+
+  inputQueue: any[] = [];
 }
 
 export class MyRoomState extends Schema {
